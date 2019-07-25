@@ -2,11 +2,13 @@
 set -x
 ## Get version information
 . conf
+REPOSITORY=https://www.kernel.org/pub/linux/utils/boot/syslinux/Testing
+#REPOSITORY=https://www.zytor.com/pub/syslinux/Testing
 ## Make a clean start
 rm -rf scratch
 mkdir scratch
 cd scratch
-wget https://www.zytor.com/pub/syslinux/Testing/${SYSLINUX_FOLDER}/${SYSLINUX}.tar.xz
+wget ${REPOSITORY}/${SYSLINUX_FOLDER}/${SYSLINUX}.tar.xz
 tar xf ${SYSLINUX}.tar.xz
 sed -i "s/Loading %s... \", kernel_name/\\\nLoading %s... \", kernel_name/g" ${SYSLINUX}/com32/elflink/ldlinux/kernel.c
 sed -i "s/Loading %s...\", initrd_name/Loading %s... \", initrd_name/g" ${SYSLINUX}/com32/elflink/ldlinux/kernel.c
