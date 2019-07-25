@@ -2,7 +2,7 @@
 #  Setup versions for image components
 #  This script should be sourced by the other scripts
 SYSLINUX_FOLDER=6.04
-SYSLINUX=syslinux-${SYSLINUX_FOLDER}-pre3
+SYSLINUX=syslinux-${SYSLINUX_FOLDER}-pre1
 #BUILDROOT=https://github.com/buildroot/buildroot.git
 BUILDROOT=git://git.buildroot.net/buildroot
 BUILDROOT_TAG=2017.05.1
